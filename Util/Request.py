@@ -9,6 +9,6 @@ class Request:
         url = getDataFromXls.getDataByCellData(row, 3)
         urllib3.disable_warnings()
         param = getDataFromXls.getDataByCellData(row, 6)
-        result = requests.get(url + '?' + param)  # 发get请求
+        result = requests.get(url + param)  # 发get请求
         print(result.status_code)
         return result
